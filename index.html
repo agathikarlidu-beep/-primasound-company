@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="el">
 <head>
   <meta charset="UTF-8" />
@@ -115,3 +115,41 @@
         <img src="IMG_20250907_212604.jpg" alt="Ειδική Εφαρμογή">
         <h3>Ειδική Εφαρμογή</h3>
       </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="reveal fade-up">
+    <h2>Επικοινωνία</h2>
+    <div class="contact-wrap">
+      <p>Κλείσε ραντεβού ή ζήτησε προσφορά</p>
+      <div class="buttons">
+        <a href="tel:2104519608">📞 210 451 9608</a>
+        <a href="mailto:info@primasound.info">✉️ info@primasound.info</a>
+      </div>
+      <iframe 
+        src="https://www.google.com/maps?q=Primasound,+Palamidiou+6,+Piraeus,+Greece&output=embed"
+        title="Χάρτης Primasound" loading="lazy" allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Primasound — Όλα τα δικαιώματα διατηρούνται
+  </footer>
+
+  <!-- Reveal on scroll JS -->
+  <script>
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries, obs)=>{
+      entries.forEach(en=>{
+        if(en.isIntersecting){
+          en.target.classList.add('show');
+          obs.unobserve(en.target);
+        }
+      });
+    },{threshold:.18});
+    revealEls.forEach(el=>io.observe(el));
+  </script>
+</body>
+</html>    
