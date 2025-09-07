@@ -1,83 +1,145 @@
-<!-- PROJECTS -->
-<section id="projects">
-  <div class="container">
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Primasound</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f9f9;
+      color: #333;
+    }
+    header {
+      background: #008b8b;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+    section {
+      padding: 2rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #004d4d;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card h3 {
+      margin: 0;
+      padding: 1rem;
+      background: #e6f7f7;
+      color: #004d4d;
+    }
+    .contact-info {
+      text-align: center;
+      background: #e0f7f7;
+      padding: 2rem;
+      border-radius: 10px;
+    }
+    .contact-info a {
+      display: block;
+      margin: 0.5rem 0;
+      padding: 0.8rem;
+      background: #008b8b;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    iframe {
+      width: 100%;
+      border: none;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #004d4d;
+      color: white;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Primasound</h1>
+    <p>Κατασκευές μετάλλου – Επαγγελματικά έργα</p>
+  </header>
+
+  <section id="projects">
     <h2>Τα έργα μας</h2>
-    <div class="projects-grid">
-
-      <!-- Κάρτα έργου -->
-      <div class="project-card">
+    <div class="projects">
+      <div class="card">
         <img src="IMG_20250907_193116.jpg" alt="Βιομηχανικές Σωληνώσεις">
-        <div class="overlay">
-          <h3>Βιομηχανικές Σωληνώσεις</h3>
-        </div>
+        <h3>Βιομηχανικές Σωληνώσεις</h3>
       </div>
-
-      <div class="project-card">
+      <div class="card">
         <img src="IMG_20250907_193041.jpg" alt="Ναυπηγικές Εργασίες">
-        <div class="overlay">
-          <h3>Ναυπηγικές Εργασίες</h3>
-        </div>
+        <h3>Ναυπηγικές Εργασίες</h3>
       </div>
-
-      <div class="project-card">
+      <div class="card">
         <img src="IMG_20250907_180844.jpg" alt="Μεταλλική Σκάλα">
-        <div class="overlay">
-          <h3>Μεταλλική Σκάλα</h3>
-        </div>
+        <h3>Μεταλλική Σκάλα</h3>
       </div>
-
+      <div class="card">
+        <img src="Screenshot_2025-09-07-19-29-35-722.jpg" alt="Πέργκολα Εξωτερικού Χώρου">
+        <h3>Πέργκολα Εξωτερικού Χώρου</h3>
+      </div>
+      <div class="card">
+        <img src="IMG_20250907_212704.jpg" alt="Κατασκευή Μετάλλου">
+        <h3>Κατασκευή Μετάλλου</h3>
+      </div>
+      <div class="card">
+        <img src="IMG_20250907_212604.jpg" alt="Ειδική Εφαρμογή">
+        <h3>Ειδική Εφαρμογή</h3>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<style>
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-}
+  <section id="contact">
+    <h2>Επικοινωνία</h2>
+    <div class="contact-info">
+      <p>Κλείσε ραντεβού ή ζήτησε προσφορά</p>
+      <a href="tel:2104519608">📞 210 451 9608</a>
+      <a href="mailto:info@primasound.info">✉ info@primasound.info</a>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3132.046705906999!2d23.647118076640358!3d37.94879290205586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bd40f4f3a8af%3A0x7c0d0f8bbf9c1a0f!2sPrimasound!5e0!3m2!1sel!2sgr!4v1694099300000!5m2!1sel!2sgr" 
+        width="600" height="300" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
 
-.project-card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-.project-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.4s ease;
-}
-
-.project-card:hover img {
-  transform: scale(1.1);
-}
-
-.project-card .overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  background: rgba(0, 128, 128, 0.7); /* τιρκουάζ διάφανο */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.project-card:hover .overlay {
-  opacity: 1;
-}
-
-.project-card .overlay h3 {
-  color: #fff;
-  font-size: 20px;
-  text-align: center;
-  padding: 10px;
-}
-</style>
+  <footer>
+    © 2025 Primasound – Όλα τα δικαιώματα διατηρούνται
+  </footer>
+</body>
+</html>
