@@ -1,73 +1,261 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-  <meta charset="UTF-8">
-  <title>Primasound - Σιδεροκατασκευές</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Primasound — Σιδεροκατασκευές</title>
   <style>
-    body {
-      margin: 0;
+    :root{
+      --brand:#008b8b;         /* τιρκουάζ-πετρόλ */
+      --brand-2:#00a7a7;       /* πιο ανοιχτό τιρκουάζ */
+      --ink:#222;              /* κύριο κείμενο */
+      --muted:#69707a;         /* δευτερεύον */
+      --bg:#f5f7f8;            /* φόντο */
+      --card:#ffffff;          /* κάρτες */
+      --border:#e6eaee;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{
       font-family: "Segoe UI", Arial, sans-serif;
-      background: #f5f7f8; /* πολύ ανοιχτό γκρι */
-      color: #222;
-      text-align: center;
+      color:var(--ink);
+      background:var(--bg);
+      line-height:1.5;
     }
 
-    header {
-      padding: 40px 20px;
-      background: #008b8b; /* τιρκουάζ-πετρόλ */
-      color: white;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    /* NAV */
+    .nav{
+      position:sticky; top:0; z-index:50;
+      background:#fff;
+      border-bottom:1px solid var(--border);
+      backdrop-filter:saturate(180%) blur(8px);
+    }
+    .container{max-width:1100px; margin:0 auto; padding:0 16px;}
+    .nav-inner{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+    }
+    .brand{display:flex; align-items:center; gap:10px; font-weight:700; color:var(--ink); text-decoration:none}
+    .brand-badge{
+      width:36px; height:36px; border-radius:10px; display:grid; place-items:center;
+      background:var(--brand); color:#fff; font-weight:800;
+      box-shadow:0 6px 16px rgba(0,0,0,.12);
+    }
+    .menu{display:flex; gap:18px; align-items:center;}
+    .menu a{color:var(--muted); text-decoration:none; font-weight:600}
+    .menu a:hover{color:var(--brand)}
+    .cta{background:var(--brand); color:#fff; padding:10px 14px; border-radius:10px; text-decoration:none; font-weight:700}
+    .cta:hover{background:var(--brand-2)}
+
+    /* HERO */
+    .hero{
+      background: radial-gradient(80% 60% at 50% -10%, #e9f7f7, transparent), #fff;
+      border-bottom:1px solid var(--border);
+    }
+    .hero-grid{
+      display:grid; grid-template-columns:1.2fr 1fr; gap:26px; padding:56px 0;
+    }
+    .hero h1{font-size:38px; margin:0 0 10px}
+    .hero p{color:var(--muted); font-size:18px; margin:8px 0 18px}
+    .hero-bullets{display:flex; gap:14px; flex-wrap:wrap; color:var(--muted); font-size:14px}
+    .chip{background:#e9f7f7; color:#055; padding:6px 10px; border-radius:999px; font-weight:700; display:inline-block}
+    .card{
+      background:var(--card); border:1px solid var(--border); border-radius:16px; padding:18px;
+      box-shadow:0 6px 20px rgba(0,0,0,.06);
+    }
+    .hero-img{aspect-ratio:4/3; border-radius:16px; background:#dfe; display:grid; place-items:center; font-weight:700; color:#055}
+
+    /* SECTION */
+    section{padding:40px 0}
+    h2{font-size:28px; margin:0 0 8px}
+    .sub{color:var(--muted); margin:0 0 18px}
+
+    /* SERVICES */
+    .grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+    .svc h3{margin:0 0 6px; font-size:18px}
+    .svc p{margin:0; color:var(--muted)}
+
+    /* PROJECTS (GALLERY) */
+    .grid4{display:grid; grid-template-columns:repeat(4,1fr); gap:12px}
+    .thumb{
+      position:relative; overflow:hidden; border-radius:12px; border:1px solid var(--border); background:#eef;
+    }
+    .thumb img{display:block; width:100%; height:180px; object-fit:cover; user-select:none}
+    .thumb:after{content:""; position:absolute; inset:0; background:linear-gradient(to bottom, transparent, rgba(0,0,0,.25));}
+    .thumb-caption{
+      position:absolute; left:8px; bottom:8px; color:#fff; font-weight:600; text-shadow:0 2px 6px rgba(0,0,0,.4);
+      font-size:13px;
     }
 
-    h1 {
-      font-size: 2.2em;
-      margin: 0;
-      font-weight: bold;
+    /* CONTACT */
+    .contact-wrap{display:grid; grid-template-columns:1fr 1fr; gap:18px}
+    .card-list{display:grid; gap:10px}
+    .row{display:flex; gap:10px; align-items:center; color:var(--ink)}
+    .btn{
+      display:inline-block; padding:10px 14px; border-radius:10px; text-decoration:none; font-weight:700;
+      border:1px solid var(--border); background:#fff; color:var(--ink);
+    }
+    .btn:hover{border-color:var(--brand); color:var(--brand)}
+    .btn.primary{background:var(--brand); color:#fff; border-color:var(--brand)}
+    .btn.primary:hover{background:var(--brand-2)}
+
+    /* FOOTER */
+    footer{
+      border-top:1px solid var(--border);
+      background:#111; color:#bbb; padding:24px 0; margin-top:20px; text-align:center; font-size:14px;
     }
 
-    p {
-      font-size: 1.2em;
-      margin-top: 8px;
-      color: #e0f7f7; /* πιο απαλό τιρκουάζ για αντίθεση */
-    }
-
-    section {
-      margin: 40px auto;
-      max-width: 900px;
-      padding: 20px;
-    }
-
-    img {
-      margin-top: 20px;
-      width: 100%;
-      max-width: 500px;
-      border-radius: 6px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-
-    footer {
-      margin-top: 50px;
-      padding: 20px;
-      background: #222;
-      color: #bbb;
-      font-size: 0.9em;
+    /* Responsive */
+    @media (max-width: 900px){
+      .hero-grid{grid-template-columns:1fr; padding:34px 0}
+      .grid3{grid-template-columns:1fr}
+      .grid4{grid-template-columns:repeat(2,1fr)}
+      .contact-wrap{grid-template-columns:1fr}
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Primasound Σιδεροκατασκευές</h1>
-    <p>Αξιοπιστία • Ποιότητα • Αντοχή</p>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="#home" class="brand"><span class="brand-badge">PS</span> Primasound</a>
+        <div class="menu">
+          <a href="#services">Υπηρεσίες</a>
+          <a href="#projects">Έργα</a>
+          <a href="#contact">Επικοινωνία</a>
+          <a href="tel:+3069XXXXXXXX" class="cta">Κλήση τώρα</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="home" class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="chip">Σιδεροκατασκευές</span>
+        <h1>Αξιοπιστία • Ποιότητα • Αντοχή</h1>
+        <p>Κατασκευάζουμε και τοποθετούμε μεταλλικές λύσεις υψηλής αντοχής για επαγγελματικούς και οικιακούς χώρους. Από σκάλες και κάγκελα μέχρι custom κατασκευές.</p>
+        <div class="hero-bullets">
+          <span>✔️ Μελέτη & σχεδιασμός</span>
+          <span>✔️ Εγκατάσταση πανελλαδικά</span>
+          <span>✔️ Εγγύηση εργασίας</span>
+        </div>
+        <div style="margin-top:16px;">
+          <a href="#contact" class="btn primary">Ζητήστε προσφορά</a>
+          <a href="#projects" class="btn">Δείτε έργα</a>
+        </div>
+      </div>
+      <div class="card hero-img">Έργα Primasound</div>
+    </div>
   </header>
 
-  <section>
-    <h2>Καλώς ήρθες στο site μας!</h2>
-    <p>Εδώ θα βρεις επαγγελματικές λύσεις στις σιδεροκατασκευές.</p>
-    <img src="IMG_20250907_180844.jpg" alt="Δείγμα σιδεροκατασκευής">
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <h2>Υπηρεσίες</h2>
+      <p class="sub">Μελέτη • Κατασκευή • Εγκατάσταση • Συντήρηση</p>
+      <div class="grid3">
+        <div class="card svc">
+          <h3>Σκάλες & Κάγκελα</h3>
+          <p>Αισθητική και ασφάλεια με ανοξείδωτο ή βαμμένο χάλυβα.</p>
+        </div>
+        <div class="card svc">
+          <h3>Στέγαστρα & Πέργκολες</h3>
+          <p>Αντοχή στις καιρικές συνθήκες, καθαρό φινίρισμα.</p>
+        </div>
+        <div class="card svc">
+          <h3>Custom Κατασκευές</h3>
+          <p>Κατά παραγγελία λύσεις για κάθε χώρο και ανάγκη.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <h2>Έργα</h2>
+      <p class="sub">Ενδεικτικές φωτογραφίες από πρόσφατες υλοποιήσεις</p>
+
+      <!-- Gallery: ΑΛΛΑΞΕ ΤΑ src με τα δικά σου αρχεία που ανέβασες στο repo -->
+      <div class="grid4">
+        <a class="thumb" href="#" onclick="return false;">
+          <img src="IMG_20250907_180844.jpg" alt="Έργο 1" oncontextmenu="return false" draggable="false">
+          <span class="thumb-caption">Κάγκελα μπαλκονιού</span>
+        </a>
+        <a class="thumb" href="#" onclick="return false;">
+          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop" alt="Έργο 2" oncontextmenu="return false" draggable="false">
+          <span class="thumb-caption">Μεταλλική σκάλα</span>
+        </a>
+        <a class="thumb" href="#" onclick="return false;">
+          <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=1200&auto=format&fit=crop" alt="Έργο 3" oncontextmenu="return false" draggable="false">
+          <span class="thumb-caption">Στέγαστρο εισόδου</span>
+        </a>
+        <a class="thumb" href="#" onclick="return false;">
+          <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1200&auto=format&fit=crop" alt="Έργο 4" oncontextmenu="return false" draggable="false">
+          <span class="thumb-caption">Πέργκολα εξωτερικού χώρου</span>
+        </a>
+      </div>
+      <p class="sub" style="margin-top:10px">Για να προσθέσεις δικές σου φωτογραφίες: <strong>Add file → Upload files</strong> στο GitHub και άλλαξε τα <code>src</code> επάνω.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <h2>Επικοινωνία</h2>
+      <p class="sub">Κλείσε ραντεβού ή ζήτησε προσφορά</p>
+
+      <div class="contact-wrap">
+        <!-- Info / Buttons -->
+        <div class="card card-list">
+          <div class="row">📞 <a class="btn" href="tel:+3069XXXXXXXX">+30 69X XXX XXXX</a></div>
+          <div class="row">✉️ <a class="btn" href="mailto:info@primasound.gr?subject=Ζήτηση%20Προσφοράς">info@primasound.gr</a></div>
+          <div class="row">📍 <span>Πειραιάς, Αττική</span></div>
+          <div class="row" style="gap:8px; flex-wrap:wrap;">
+            <a class="btn" href="#projects">Δες έργα</a>
+            <a class="btn primary" href="mailto:info@primasound.gr?subject=Ζήτηση%20Προσφοράς&body=Ονοματεπώνυμο:%0AΤηλέφωνο:%0AΠεριγραφή έργου:">Ζήτηση προσφοράς</a>
+          </div>
+          <small style="color:var(--muted)">* Συμπλήρωσε τηλέφωνο/email για άμεση επικοινωνία.</small>
+        </div>
+
+        <!-- Google Map (βάλε δική σου τοποθεσία/iframe από Google Maps → Κοινή χρήση → Ενσωμάτωση χάρτη) -->
+        <div class="card" style="padding:0; overflow:hidden;">
+          <iframe
+            title="Χάρτης"
+            width="100%" height="320" style="border:0"
+            loading="lazy" allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Piraeus,Greece&output=embed">
+          </iframe>
+        </div>
+      </div>
+    </div>
   </section>
 
   <footer>
-    © 2025 Primasound - Όλα τα δικαιώματα διατηρούνται
+    © 2025 Primasound — Όλα τα δικαιώματα διατηρούνται
   </footer>
+
+  <!-- Ήπια προστασία εικόνων (δεν είναι απόλυτη): κλειδώνει right-click/drag σε <img> -->
+  <script>
+    document.addEventListener('contextmenu', e=>{
+      if(e.target.tagName==='IMG') e.preventDefault();
+    });
+    document.querySelectorAll('img').forEach(img=>{
+      img.setAttribute('draggable','false');
+    });
+    // Smooth scroll στα anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id=a.getAttribute('href').slice(1);
+        const el=document.getElementById(id);
+        if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); }
+      });
+    });
+  </script>
 </body>
-</html>
+</html>  
