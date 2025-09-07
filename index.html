@@ -202,60 +202,17 @@
       <p class="sub" style="margin-top:10px">Για να προσθέσεις δικές σου φωτογραφίες: <strong>Add file → Upload files</strong> στο GitHub και άλλαξε τα <code>src</code> επάνω.</p>
     </div>
   </section>
+  /* CONTACT */
+    .contact-wrap{display:grid; grid-template-columns:1fr 1fr; gap:18px}
+    .card-list{display:grid; gap:10px}
+    .row{display:flex; gap:10px; align-items:center; color:var(--ink)}
+    .btn{
+      display:inline-block; padding:10px 14px; border-radius:10px; text-decoration:none; font-weight:700;
+      border:1px solid var(--border); background:#fff; color:var(--ink);
+    }
+    .btn:hover{border-color:var(--brand); color:var(--brand)}
+    .btn.primary{background:var(--brand); color:#fff; border-color:var(--brand)}
+    .btn.primary:hover{background:var(--brand-2)}
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="container">
-      <h2>Επικοινωνία</h2>
-      <p class="sub">Κλείσε ραντεβού ή ζήτησε προσφορά</p>
-
-      <div class="contact-wrap">
-        <!-- Info / Buttons -->
-        <div class="card card-list">
-          <div class="row">📞 <a class="btn" href="tel:+306981767388">+2104519608</a></div>
-          <div class="row">✉️ <a class="btn" href="mailto:info@primasound.info?subject=Ζήτηση%20Προσφοράς">info@primasound.gr</a></div>
-          <div class="row">📍 <span>Πειραιάς, Αττική</span></div>
-          <div class="row" style="gap:8px; flex-wrap:wrap;">
-            <a class="btn" href="#projects">Δες έργα</a>
-            <a class="btn primary" href="mailto:info@primasound.info?subject=Ζήτηση%20Προσφοράς&body=Ονοματεπώνυμο:%0AΤηλέφωνο:%0AΠεριγραφή έργου:">Ζήτηση προσφοράς</a>
-          </div>
-          <small style="color:var(--muted)">* Συμπλήρωσε τηλέφωνο/email για άμεση επικοινωνία.</small>
-        </div>
-
-        <!-- Google Map (βάλε δική σου τοποθεσία/iframe από Google Maps → Κοινή χρήση → Ενσωμάτωση χάρτη) -->
-        <div class="card" style="padding:0; overflow:hidden;">
-          <iframe
-            title="Χάρτης"
-            width="100%" height="320" style="border:0"
-            loading="lazy" allowfullscreen
-            referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps?q=Piraeus,Greece&output=embed">
-          </iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    © 2025 Primasound — Όλα τα δικαιώματα διατηρούνται
-  </footer>
-
-  <!-- Ήπια προστασία εικόνων (δεν είναι απόλυτη): κλειδώνει right-click/drag σε <img> -->
-  <script>
-    document.addEventListener('contextmenu', e=>{
-      if(e.target.tagName==='IMG') e.preventDefault();
-    });
-    document.querySelectorAll('img').forEach(img=>{
-      img.setAttribute('draggable','false');
-    });
-    // Smooth scroll στα anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', e=>{
-        const id=a.getAttribute('href').slice(1);
-        const el=document.getElementById(id);
-        if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); }
-      });
-    });
-  </script>
-</body>
+  </body>
 </html>  
