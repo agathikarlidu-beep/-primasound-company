@@ -1,110 +1,208 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="el">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Primasound</title>
-  <style>
-    :root{--brand:#009688;--brand-dark:#00796b;--ink:#333;--bg:#f9f9f9}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:var(--ink)}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Primasound — Κατασκευές Μετάλλου</title>
 
-    /* NAV */
-    .nav{position:sticky;top:0;background:#fff;border-bottom:1px solid #eaeaea}
-    .nav-inner{max-width:1000px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:10px 16px}
-    .brand{font-weight:800;color:var(--brand);text-decoration:none}
-    .menu{display:flex;gap:14px}
+  <!-- SEO -->
+  <meta name="description" content="Primasound: Κατασκευές μετάλλου, σωληνώσεις, ναυπηγικά, πέργκολες, προκατ & acoustic cleaners. Πειραιάς." />
+  <link rel="icon" href="IMG_20250907_212704.jpg" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Primasound – Κατασκευές Μετάλλου" />
+  <meta property="og:description" content="Επαγγελματικά έργα σε βιομηχανία & ναυπηγικά." />
+  <meta property="og:image" content="https://primasound-company.vercel.app/IMG_20250907_212704.jpg" />
+  <meta property="og:type" content="website" />
+
+  <!-- LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"Primasound",
+    "image":"https://primasound-company.vercel.app/IMG_20250907_212704.jpg",
+    "telephone":"+302104519608",
+    "email":"info@primasound.info",
+    "address":{"@type":"PostalAddress","streetAddress":"Παλαμηδίου 6","addressLocality":"Πειραιάς","postalCode":"18543","addressCountry":"GR"},
+    "url":"https://primasound-company.vercel.app",
+    "openingHours":"Mo-Fr 08:00-18:00"
+  }
+  </script>
+
+  <!-- === STYLES === -->
+  <style>
+    /* Design tokens */
+    :root{
+      --brand:#009688;
+      --brand-dark:#073b3a;
+      --ink:#263238;
+      --muted:#6b7d85;
+      --bg:#f6fbfb;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+    }
+    img{max-width:100%;height:auto;display:block}
+    main{max-width:1100px;margin:0 auto;padding:20px}
+    section{margin:32px 0}
+
+    /* Nav */
+    .nav{position:sticky;top:0;z-index:999;background:#fff;border-bottom:1px solid rgba(0,0,0,.06);box-shadow:0 6px 14px rgba(0,0,0,.06)}
+    .nav-inner{max-width:1100px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:18px}
+    .brand{font-weight:800;color:var(--brand-dark);text-decoration:none}
+    .menu{display:flex;gap:20px;margin-left:auto}
     .menu a{color:#555;text-decoration:none;font-weight:600}
     .menu a:hover{color:var(--brand)}
+    @media (max-width:768px){ .menu{gap:32px} }
 
-    header{background:var(--brand);color:#fff;text-align:center;padding:20px}
-    header h1{margin:0;font-size:2em} header p{margin:6px 0 0}
+    /* Hero */
+    header{
+      background:
+        linear-gradient(180deg, rgba(0,150,136,.15), rgba(0,150,136,0)),
+        url('IMG_20250907_212704.jpg') center/cover no-repeat;
+      color:var(--brand-dark);
+      padding:68px 16px 44px;
+      text-align:center;
+      border-radius:0 0 16px 16px;
+    }
+    header h1{font-size:clamp(32px,4vw,48px);margin:0 0 8px}
+    header p{font-size:clamp(16px,2.6vw,20px);opacity:.9}
 
-    section{padding:40px 20px;text-align:center}
-    h2{margin-bottom:20px;font-size:1.8em}
+    /* Grid / Cards */
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    @media (max-width:880px){.grid{grid-template-columns:1fr}}
+    .card{position:relative;overflow:hidden;border-radius:16px;background:#fff;box-shadow:0 10px 20px rgba(0,0,0,.06);transition:transform .25s,box-shadow .25s}
+    .card img{width:100%;height:360px;object-fit:cover}
+    .card:hover{transform:translateY(-4px);box-shadow:0 16px 28px rgba(0,0,0,.1)}
+    .caption{position:absolute;left:16px;right:16px;bottom:16px;background:rgba(7,59,58,.75);color:#fff;padding:10px 14px;border-radius:12px;font-weight:700;backdrop-filter:blur(4px)}
 
-    .projects{display:grid;grid-template-columns:1fr;gap:20px;max-width:1000px;margin:auto}
-    .project-card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 10px rgba(0,0,0,.1);transition:transform .2s}
-    .project-card:hover{transform:scale(1.03)}
-    .project-card img{width:100%;height:220px;object-fit:cover}
-    .project-card h3{margin:0;padding:12px;background:#e0f2f1;color:#004d40;font-size:1.1em}
+    /* Buttons */
+    .btn{display:inline-block;padding:10px 14px;border-radius:12px;text-decoration:none;font-weight:700;border:1px solid var(--brand);color:var(--brand-dark);background:#fff}
+    .btn.primary{background:var(--brand);color:#fff;border-color:var(--brand)}
+    .btn:hover{filter:brightness(1.05)}
 
-    .contact{background:#e0f7fa;padding:40px 20px}
-    .contact a{display:inline-block;margin:10px;padding:12px 20px;border-radius:8px;background:var(--brand);color:#fff;text-decoration:none;font-weight:700}
-    .contact a:hover{background:var(--brand-dark)}
-    iframe{border:none;border-radius:10px;margin-top:20px;width:100%;height:300px}
+    /* Contact */
+    .contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
+    @media (max-width:880px){.contact-wrap{grid-template-columns:1fr}}
+    .card-list{display:grid;gap:10px}
+    .row{display:flex;gap:10px;align-items:center;color:var(--ink)}
 
-    footer{divtext-align:center;padding:20px;background:#004d40;color:#fff;font-size:.9em}
+    footer{text-align:center;padding:20px 16px;color:var(--muted)}
+
+    /* Floating Call & Back-to-top */
+    .fab{position:fixed;right:18px;bottom:18px;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:var(--brand);color:#fff;font-size:22px;text-decoration:none;box-shadow:0 10px 18px rgba(0,0,0,.18);z-index:1000}
+    .fab:hover{filter:brightness(1.05)}
+    #toTop{position:fixed;right:18px;bottom:88px;opacity:0;pointer-events:none;transition:.25s;background:var(--brand-dark);color:#fff;border-radius:999px;padding:10px 14px;text-decoration:none;box-shadow:0 8px 18px rgba(0,0,0,.15);z-index:1000}
+    #toTop.show{opacity:1;pointer-events:auto}
   </style>
 </head>
-<body>
 
+<body id="top">
   <!-- NAV -->
-  <nav>
-  <div class="nav-inner">
-    <a class="brand" href="index.html">Primasound</a>
-    <div class="menu">
-      <a href="index.html">Αρχική</a>
-      <a href="projects.html">Projects</a>
-      <a href="acoustic.html">Acoustic Cleaners</a>
-      <a href="#contact">Επικοινωνία</a>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">Primasound</a>
+      <div class="menu">
+        <a href="index.html">Αρχική</a>
+        <a href="projects.html">Projects</a>
+        <a href="acoustic.html">Acoustic Cleaners</a>
+        <a href="#contact">Επικοινωνία</a>
+      </div>
     </div>
-  </div>
   </nav>
 
+  <!-- HERO -->
   <header>
     <h1>Primasound</h1>
-    <p>Κατασκευές μετάλλου – Επαγγελματικά έργα</p>
+    <p>Κατασκευές μετάλλου — Επαγγελματικά έργα</p>
   </header>
 
-  <section aria-labelledby="works">
-    <h2 id="works">Τα έργα μας</h2>
-    <div class="projects">
+  <main>
+    <!-- PROJECTS -->
+    <section>
+      <h2 style="text-align:center;font-size:clamp(26px,3.2vw,36px);margin:10px 0 24px">Τα έργα μας</h2>
 
-      <div class="project-card">
-        <img src="IMG_20250907_193041.jpg" alt="Βιομηχανικές Σωληνώσεις">
-        <h3>Βιομηχανικές Σωληνώσεις</h3>
+      <div class="grid">
+        <!-- Βιομηχανικές Σωληνώσεις -->
+        <a class="card" href="projects.html#pipes">
+          <img src="IMG_20250907_212704.jpg" alt="Βιομηχανικές Σωληνώσεις — Primasound" loading="lazy">
+          <div class="caption">Βιομηχανικές Σωληνώσεις</div>
+        </a>
+
+        <!-- Ναυπηγικές Εργασίες -->
+        <a class="card" href="projects.html#marine">
+          <img src="IMG_20250907_193041.jpg" alt="Ναυπηγικές εργασίες — Primasound" loading="lazy">
+          <div class="caption">Ναυπηγικές Εργασίες</div>
+        </a>
+
+        <!-- Κατασκευή Μετάλλου -->
+        <a class="card" href="projects.html#metal">
+          <img src="IMG_20250907_212604.jpg" alt="Κατασκευή μετάλλου — Primasound" loading="lazy">
+          <div class="caption">Κατασκευή Μετάλλου</div>
+        </a>
+
+        <!-- Πέργκολα Εξωτερικού Χώρου (επαγγελματική φωτογραφία) -->
+        <a class="card" href="projects.html#pergola">
+          <img src="https://images.unsplash.com/photo-1523419409543-3244a33f5f5b?auto=format&fit=crop&w=1600&q=80"
+               alt="Πέργκολα εξωτερικού χώρου – δείγμα έργου"
+               loading="lazy">
+          <div class="caption">Πέργκολα Εξωτερικού Χώρου</div>
+        </a>
       </div>
+    </section>
 
-      <div class="project-card">
-        <img src="IMG_20250907_193116.jpg" alt="Ναυπηγικές Εργασίες">
-        <h3>Ναυπηγικές Εργασίες</h3>
+    <!-- CONTACT -->
+    <section id="contact" style="margin-top:40px">
+      <h2 style="text-align:center;font-size:clamp(26px,3.2vw,34px)">Επικοινωνία</h2>
+      <p class="sub" style="text-align:center;margin:-4px 0 18px;color:var(--muted)">
+        Κλείσε ραντεβού ή ζήτησε προσφορά
+      </p>
+
+      <div class="contact-wrap">
+        <!-- Info / Buttons -->
+        <div class="card-list">
+          <div class="row">📞 <a class="btn primary" href="tel:2104519608">210 451 9608</a></div>
+          <div class="row">✉️ <a class="btn" href="mailto:info@primasound.info">info@primasound.info</a></div>
+          <div class="row">📍 <span>Παλαμηδίου 6, Πειραιάς 18543</span></div>
+
+          <div class="row" style="gap:8px;flex-wrap:wrap;margin-top:6px">
+            <a class="btn" href="#projects">Δες έργα</a>
+            <a class="btn primary" href="projects.html">Περισσότερα Projects</a>
+          </div>
+
+          <small style="color:var(--muted)">* Συνήθως απαντάμε αυθημερόν</small>
+        </div>
+
+        <!-- Google Map -->
+        <div class="card" style="padding:0; overflow:hidden; border-radius:14px; box-shadow:0 10px 20px rgba(0,0,0,.06); background:#fff">
+          <iframe
+            title="Χάρτης"
+            width="100%" height="320" loading="lazy" style="border:0"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Παλαμηδίου%206,%20Πειραιάς%2018543&output=embed">
+          </iframe>
+        </div>
       </div>
+    </section>
+  </main>
 
-      <div class="project-card">
-        <img src="IMG_20250907_212704.jpg" alt="Μεταλλική Σκάλα">
-        <h3>Μεταλλική Σκάλα</h3>
-      </div>
+  <footer>© 2025 Primasound — Όλα τα δικαιώματα διατηρούνται</footer>
 
-      <div class="project-card">
-        <img src="https://tse1.mm.bing.net/th/id/OIP.cWq3bdLv8UpuawdZY9U56wHaEK?r=0&pid=Api" alt="Πέργκολα Εξωτερικού Χώρου">
-        <h3>Πέργκολα Εξωτερικού Χώρου</h3>
-      </div>
+  <!-- Back to top + Floating Call -->
+  <a id="toTop" href="#top" aria-label="Πάνω">↑ Πάνω</a>
+  <a class="fab" href="tel:2104519608" aria-label="Κλήση">📞</a>
 
-      <div class="project-card">
-        <img src="IMG_20250907_212604.jpg" alt="Κατασκευή Μετάλλου">
-        <h3>Κατασκευή Μετάλλου</h3>
-      </div>
-
-      <div class="project-card">
-        <img src="https://tse2.mm.bing.net/th/id/OIP.5i_qT7mOAH4oDdutKoDOgwHaFM?pid=Api" alt="Σπίτια Προκάτ">
-        <h3>Σπίτια Προκάτ</h3>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="contact" class="contact">
-    <h2>Επικοινωνία</h2>
-    <p>Κλείσε ραντεβού ή ζήτησε προσφορά</p>
-    <a href="tel:2104519608">📞 210 451 9608</a>
-    <a href="mailto:info@primasound.info">✉️ info@primasound.info</a>
-    <iframe src="https://www.google.com/maps?q=Primasound,+Palamidiou+6,+Piraeus,+Greece&output=embed"></iframe>
-  </section>
-
-  <footer>
-    © 2025 Primasound — Όλα τα δικαιώματα διατηρούνται
-  </footer>
-
+  <script>
+    // εμφάνιση "Πάνω" όταν γίνεται scroll
+    const toTop=document.getElementById('toTop');
+    addEventListener('scroll',()=>{ toTop.classList.toggle('show', scrollY>600);});
+  </script>
 </body>
 </html>
