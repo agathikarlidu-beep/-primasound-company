@@ -5,109 +5,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Primasound</title>
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background: #009688;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2em;
-    }
-    header p {
-      margin: 5px 0 0;
-      font-size: 1.1em;
-    }
-    section {
-      padding: 40px 20px;
-      text-align: center;
-    }
-    h2 {
-      margin-bottom: 20px;
-      font-size: 1.8em;
-    }
-    .projects {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .project-card {
-      background: white;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
-    }
-    .project-card:hover {
-      transform: scale(1.03);
-    }
-    .project-card img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-    }
-    .project-card h3 {
-      margin: 0;
-      padding: 12px;
-      background: #e0f2f1;
-      color: #004d40;
-      font-size: 1.1em;
-    }
-    .contact {
-      background: #e0f7fa;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    .contact a {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 20px;
-      border-radius: 8px;
-      background: #009688;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-    .contact a:hover {
-      background: #00796b;
-    }
-    iframe {
-      border: none;
-      border-radius: 10px;
-      margin-top: 20px;
-      width: 100%;
-      height: 300px;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #004d40;
-      color: white;
-      font-size: 0.9em;
-    }
+    :root{--brand:#009688;--brand-dark:#00796b;--ink:#333;--bg:#f9f9f9}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:var(--ink)}
+
+    /* NAV */
+    .nav{position:sticky;top:0;background:#fff;border-bottom:1px solid #eaeaea}
+    .nav-inner{max-width:1000px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:10px 16px}
+    .brand{font-weight:800;color:var(--brand);text-decoration:none}
+    .menu{display:flex;gap:14px}
+    .menu a{color:#555;text-decoration:none;font-weight:600}
+    .menu a:hover{color:var(--brand)}
+
+    header{background:var(--brand);color:#fff;text-align:center;padding:20px}
+    header h1{margin:0;font-size:2em} header p{margin:6px 0 0}
+
+    section{padding:40px 20px;text-align:center}
+    h2{margin-bottom:20px;font-size:1.8em}
+
+    .projects{display:grid;grid-template-columns:1fr;gap:20px;max-width:1000px;margin:auto}
+    .project-card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 10px rgba(0,0,0,.1);transition:transform .2s}
+    .project-card:hover{transform:scale(1.03)}
+    .project-card img{width:100%;height:220px;object-fit:cover}
+    .project-card h3{margin:0;padding:12px;background:#e0f2f1;color:#004d40;font-size:1.1em}
+
+    .contact{background:#e0f7fa;padding:40px 20px}
+    .contact a{display:inline-block;margin:10px;padding:12px 20px;border-radius:8px;background:var(--brand);color:#fff;text-decoration:none;font-weight:700}
+    .contact a:hover{background:var(--brand-dark)}
+    iframe{border:none;border-radius:10px;margin-top:20px;width:100%;height:300px}
+
+    footer{text-align:center;padding:20px;background:#004d40;color:#fff;font-size:.9em}
   </style>
 </head>
 <body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">Primasound</a>
+      <div class="menu">
+        <a href="index.html">Αρχική</a>
+        <a href="projects.html">Projects</a>
+        <a href="#contact">Επικοινωνία</a>
+      </div>
+    </div>
+  </nav>
 
   <header>
     <h1>Primasound</h1>
     <p>Κατασκευές μετάλλου – Επαγγελματικά έργα</p>
   </header>
 
-  <section>
-    <h2>Τα έργα μας</h2>
+  <section aria-labelledby="works">
+    <h2 id="works">Τα έργα μας</h2>
     <div class="projects">
-      
+
       <div class="project-card">
         <img src="IMG_20250907_193041.jpg" alt="Βιομηχανικές Σωληνώσεις">
         <h3>Βιομηχανικές Σωληνώσεις</h3>
@@ -141,12 +93,12 @@
     </div>
   </section>
 
-  <section class="contact">
+  <section id="contact" class="contact">
     <h2>Επικοινωνία</h2>
     <p>Κλείσε ραντεβού ή ζήτησε προσφορά</p>
     <a href="tel:2104519608">📞 210 451 9608</a>
-    <a href="mailto:info@primasound.info">✉ info@primasound.info</a>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3122.123456789!2d23.647!3d37.944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1a30a1b12345%3A0x67890abcdef!2sPrimasound!5e0!3m2!1sel!2sgr!4v1700000000000"></iframe>
+    <a href="mailto:info@primasound.info">✉️ info@primasound.info</a>
+    <iframe src="https://www.google.com/maps?q=Primasound,+Palamidiou+6,+Piraeus,+Greece&output=embed"></iframe>
   </section>
 
   <footer>
@@ -154,4 +106,4 @@
   </footer>
 
 </body>
-</html>  
+</html>
