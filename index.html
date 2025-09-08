@@ -1,153 +1,67 @@
-<!DOCTYPE html>
+          <!DOCTYPE html>
 <html lang="el">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Primasound — Κατασκευές Μετάλλου</title>
   <style>
-    :root {
-      --brand: #009688; /* τιρκουάζ */
-      --brand-dark: #00695c;
-      --ink: #222;
-      --muted: #666;
-      --bg: #f7f9fa;
+    :root{
+      --brand:#009688;        /* τιρκουάζ */
+      --brand-dark:#00695c;
+      --ink:#222;
+      --muted:#667085;
+      --bg:#f6f8fa;
+      --card:#ffffff;
+      --shadow:0 6px 18px rgba(0,0,0,.08);
+      --radius:14px;
     }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink)}
 
-    * {
-      box-sizing: border-box;
-    }
+    /* NAV */
+    nav{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid #e6e8eb}
+    .nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:12px 18px}
+    .brand{font-weight:800;color:var(--brand)}
+    .menu{display:flex;gap:22px}
+    .menu a{color:#364152;text-decoration:none;font-weight:600}
+    .menu a:hover,.menu a.active{color:var(--brand)}
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: var(--bg);
-      color: var(--ink);
-    }
+    /* HERO (όπως παλιά, συμπαγές τιρκουάζ) */
+    header{background:linear-gradient(135deg,var(--brand),var(--brand-dark));color:#fff;text-align:center;padding:70px 20px}
+    header h1{margin:0;font-size:44px}
+    header p{margin-top:10px;font-size:18px;opacity:.95}
 
-    /* Navigation */
-    nav {
-      background: #fff;
-      border-bottom: 1px solid #ddd;
-      padding: 10px 20px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+    main{max-width:1100px;margin:0 auto;padding:36px 18px}
+    h2{text-align:center;margin:0 0 22px}
 
-    .nav-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+    /* Κάρτες έργων όπως πριν */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+    .card{background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+    .card img{width:100%;height:260px;object-fit:cover;display:block}
+    .caption{position:relative}
+    .caption span{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.65) 90%);color:#fff;padding:14px 16px;font-weight:700}
 
-    .brand {
-      font-weight: 800;
-      font-size: 18px;
-      color: var(--brand);
-    }
+    /* Επικοινωνία (όπως πριν) */
+    #contact{margin-top:48px}
+    .contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .card.soft{padding:18px}
+    .row{display:flex;gap:10px;align-items:center;color:#213547}
+    .btn{display:inline-block;padding:12px 18px;border-radius:12px;border:1px solid #cfd4da;text-decoration:none;color:#213547;background:#fff;font-weight:700}
+    .btn.primary{background:var(--brand);border-color:var(--brand);color:#fff}
+    .btn:hover{filter:brightness(1.02)}
+    iframe{border:0;width:100%;height:320px;border-radius:12px}
 
-    .menu {
-      display: flex;
-      gap: 20px;
-    }
-
-    .menu a {
-      color: #333;
-      text-decoration: none;
-      font-weight: 500;
-      padding: 6px 10px;
-      transition: color 0.2s;
-    }
-
-    .menu a:hover {
-      color: var(--brand);
-    }
-
-    .menu a.active {
-      color: var(--brand);
-      font-weight: 700;
-    }
-
-    /* Hero */
-    header {
-      background: linear-gradient(135deg, var(--brand), var(--brand-dark));
-      color: #fff;
-      padding: 80px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
-
-    header p {
-      margin-top: 10px;
-      font-size: 1.2em;
-    }
-
-    /* Projects Section */
-    main {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      position: relative;
-      overflow: hidden;
-      border-radius: 12px;
-      background: #fff;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    .card img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .caption {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: rgba(0,0,0,0.6);
-      color: #fff;
-      padding: 10px;
-      font-weight: 600;
-      text-align: center;
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      color: var(--muted);
-    }
+    footer{text-align:center;color:var(--muted);padding:26px}
+    @media (max-width:780px){.contact-wrap{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
+
   <nav>
     <div class="nav-inner">
       <div class="brand">Primasound</div>
       <div class="menu">
-        <a href="index.html" class="active">Αρχική</a>
+        <a class="active" href="index.html">Αρχική</a>
         <a href="projects.html">Projects</a>
         <a href="acoustic.html">Acoustic Cleaners</a>
         <a href="#contact">Επικοινωνία</a>
@@ -162,32 +76,61 @@
 
   <main>
     <h2>Τα έργα μας</h2>
+
     <div class="grid">
+      <!-- ΜΗΝ αλλάξεις τα src – ίδιες φωτογραφίες όπως πριν -->
       <div class="card">
         <img src="IMG_20250907_193041.jpg" alt="Βιομηχανικές Σωληνώσεις">
-        <div class="caption">Βιομηχανικές Σωληνώσεις</div>
+        <div class="caption"><span>Βιομηχανικές Σωληνώσεις</span></div>
       </div>
+
       <div class="card">
         <img src="IMG_20250907_193116.jpg" alt="Ναυπηγικές Εργασίες">
-        <div class="caption">Ναυπηγικές Εργασίες</div>
+        <div class="caption"><span>Ναυπηγικές Εργασίες</span></div>
       </div>
+
       <div class="card">
         <img src="IMG_20250907_212704.jpg" alt="Μεταλλική Σκάλα">
-        <div class="caption">Μεταλλική Σκάλα</div>
+        <div class="caption"><span>Μεταλλική Σκάλα</span></div>
       </div>
+
+      <!-- Πέργκολα – η επαγγελματική φωτογραφία που είχαμε επιλέξει -->
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e" alt="Πέργκολα Εξωτερικού Χώρου">
-        <div class="caption">Πέργκολα Εξωτερικού Χώρου</div>
+        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1400&auto=format&fit=crop" alt="Πέργκολα Εξωτερικού Χώρου">
+        <div class="caption"><span>Πέργκολα Εξωτερικού Χώρου</span></div>
       </div>
+
+      <!-- Σπίτι Προκάτ – η ρεαλιστική πρώτη επιλογή -->
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705" alt="Σπίτι Προκάτ">
-        <div class="caption">Σπίτια Προκάτ</div>
+        <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=1400&auto=format&fit=crop" alt="Σπίτια Προκάτ">
+        <div class="caption"><span>Σπίτια Προκάτ</span></div>
       </div>
     </div>
+
+    <!-- ΕΠΙΚΟΙΝΩΝΙΑ -->
+    <section id="contact">
+      <h2>Επικοινωνία</h2>
+      <div class="contact-wrap">
+        <div class="card soft">
+          <div class="row">📞 <a class="btn primary" href="tel:+302104519608">210 451 9608</a></div>
+          <div class="row">✉️ <a class="btn" href="mailto:info@primasound.info">info@primasound.info</a></div>
+          <div class="row">📍 <a class="btn" target="_blank" rel="noopener" href="https://maps.google.com/?q=Palamidiou%206,%20Piraeus%20185%2043">Παλamιδίου 6, Πειραιάς 185 43</a></div>
+          <small style="color:var(--muted)">* Ωράριο: Δευ–Παρ 08:00–17:00</small>
+        </div>
+        <div class="card soft">
+          <!-- Ενσωματωμένος χάρτης στο ίδιο σημείο -->
+          <iframe
+            title="Χάρτης"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?&q=Palamidiou%206,%20Piraeus%20185%2043&output=embed">
+          </iframe>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    © 2025 Primasound — Όλα τα δικαιώματα διατηρούνται
-  </footer>
+  <footer>© 2025 Primasound — Όλα τα δικαιώματα διατηρούνται</footer>
+
 </body>
-</html>        
+</html>
