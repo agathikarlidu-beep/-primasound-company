@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="el">
 <head>
   <meta charset="UTF-8" />
@@ -36,3 +36,136 @@
       font-weight: 900;
       font-family: 'Arial Black', Arial, sans-serif;
       background: linear-gradient(90deg, #00a8a8, #444);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.25);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+    .logo-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #00a8a8, #006d6d);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 800;
+      font-size: 16px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    /* HERO */
+    header{background:linear-gradient(135deg,#009688,#006d6d);color:#fff;text-align:center;padding:60px 20px}
+    header h1{margin:0;font-size:42px}
+    header p{margin-top:10px;font-size:18px}
+
+    /* MAIN */
+    main{max-width:1100px;margin:0 auto;padding:40px 20px}
+    h2{text-align:center;margin-bottom:20px}
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+    .card{background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);position:relative}
+    .card img{width:100%;height:240px;object-fit:cover;display:block}
+    .caption{position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,.55);color:#fff;padding:12px;font-weight:700;text-align:center}
+
+    /* CONTACT */
+    #contact{margin-top:50px}
+    .contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .contact-info{background:#fff;padding:20px;border-radius:var(--radius);box-shadow:var(--shadow)}
+    .row{margin-bottom:12px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:12px;text-decoration:none;font-weight:700}
+    .btn.primary{background:var(--brand);color:#fff}
+    .btn.secondary{border:1px solid var(--brand);color:var(--brand);background:#fff}
+
+    iframe{width:100%;height:300px;border:0;border-radius:var(--radius)}
+    footer{text-align:center;color:var(--muted);padding:30px 10px}
+    @media(max-width:768px){.contact-wrap{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <!-- Νέο λογότυπο -->
+      <a href="index.html" class="logo">
+        <div class="logo-icon">P</div>
+        Primasound
+      </a>
+
+      <div class="menu">
+        <a class="active" href="index.html">Αρχική</a>
+        <a href="projects.html">Projects</a>
+        <a href="acoustic.html">Acoustic Cleaners</a>
+        <a href="#contact">Επικοινωνία</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header>
+    <h1>Primasound</h1>
+    <p>Κατασκευές μετάλλου — Επαγγελματικά έργα</p>
+  </header>
+
+  <!-- PROJECTS -->
+  <main>
+    <h2>Τα έργα μας</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="IMG_20250907_193041.jpg" alt="Βιομηχανικές Σωληνώσεις">
+        <div class="caption">Βιομηχανικές Σωληνώσεις</div>
+      </div>
+      <div class="card">
+        <img src="IMG_20250907_193116.jpg" alt="Ναυπηγικές Εργασίες">
+        <div class="caption">Ναυπηγικές Εργασίες</div>
+      </div>
+      <div class="card">
+        <img src="IMG_20250907_212704.jpg" alt="Μεταλλική Σκάλα">
+        <div class="caption">Μεταλλική Σκάλα</div>
+      </div>
+      <div class="card">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.AqBG91wOus3mXqCXrNp9XQHaEK?pid=Api" alt="Ξύλινη minimal πέργκολα εξωτερικού χώρου">
+        <div class="caption">Πέργκολα Εξωτερικού Χώρου</div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=1600&auto=format&fit=crop" alt="Σύγχρονο σπίτι προκατ με ξύλο και τζαμαρίες">
+        <div class="caption">Σπίτια Προκάτ</div>
+      </div>
+      <div class="card">
+        <img src="IMG_20250907_212604.jpg" alt="Κατασκευή Μετάλλου">
+        <div class="caption">Κατασκευή Μετάλλου</div>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Επικοινωνία</h2>
+      <div class="contact-wrap">
+        <div class="contact-info">
+          <div class="row">📞 210 451 9608</div>
+          <div class="row">✉️ info@primasound.info</div>
+          <div class="row">📍 Παλαμηδίου 6, Πειραιάς 18543</div>
+          <a class="btn primary" href="tel:+302104519608">Κλήση</a>
+          <a class="btn secondary" href="mailto:info@primasound.info">Email</a>
+        </div>
+        <div>
+          <iframe
+            title="Χάρτης Primasound"
+            src="https://www.google.com/maps?q=Παλαμηδίου+6,+Πειραιάς+18543&output=embed"
+            loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Primasound — Όλα τα δικαιώματα διατηρούνται.
+  </footer>
+
+</body>
+</html>  
