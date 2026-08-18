@@ -1,167 +1,47 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Acoustic Cleaners 230 & 360 — Primasound</title>
-  <meta name="description" content="Acoustic Cleaners τύπου 230 & 360 για αποκόλληση επικαθίσεων με ηχητικά κύματα. Μελέτη, κατασκευή, εγκατάσταση & υποστήριξη από την Primasound." />
-  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
-  <style>
-    :root{
-      --bg:#f4faf9;           /* απαλό τιρκουάζ φόντο */
-      --ink:#0d3334;          /* σκούρο μπλε-πράσινο για κείμενα */
-      --brand:#0ea5a6;        /* τιρκουάζ brand */
-      --brand-2:#0b8c8d;      /* hover */
-      --card:#ffffff;
-      --muted:#6a7a7a;
-      --ring: 0 10px 30px rgba(14,165,166,.15);
-      --radius:18px;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Noto Sans",sans-serif;color:var(--ink);background:var(--bg)}
-    a{color:inherit}
-    .container{max-width:1060px;margin:0 auto;padding:18px}
-    header.top{
-      background:linear-gradient(180deg, rgba(14,165,166,.25), rgba(14,165,166,.05));
-      position:sticky;top:0;z-index:5;backdrop-filter:saturate(140%) blur(6px)
-    }
-    nav{display:flex;gap:14px;align-items:center;justify-content:space-between}
-    .logo{font-weight:800;font-size:22px;letter-spacing:.3px}
-    .nav{display:flex;gap:14px;flex-wrap:wrap}
-    .nav a{padding:8px 12px;border-radius:12px;text-decoration:none}
-    .nav a:hover{background:#ffffffaa}
-    .cta{background:var(--brand);color:#fff;border-radius:12px;padding:8px 14px;text-decoration:none;font-weight:700}
-    .cta:hover{background:var(--brand-2)}
-
-    .hero{padding:36px 0 8px}
-    .hero h1{font-size:38px;margin:4px 0 8px}
-    .hero p{color:var(--muted);margin:0}
-    .tag{display:inline-block;background:#fff;border:1px solid #d8eeee;color:var(--brand);padding:6px 10px;border-radius:999px;font-weight:700;font-size:12px;margin-bottom:10px}
-
-    .grid{display:grid;gap:18px}
-    @media(min-width:800px){.grid.cols-2{grid-template-columns:1fr 1fr}}
-    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--ring);overflow:hidden}
-    .card .pad{padding:16px}
-    .media{aspect-ratio:16/9;background:#e9f4f4}
-    .media img{width:100%;height:100%;object-fit:cover;display:block}
-
-    .specs{display:grid;gap:12px}
-    @media(min-width:800px){.specs{grid-template-columns:repeat(3,1fr)}}
-    .kpi{background:#fff;border:1px solid #d8eeee;border-radius:14px;padding:14px}
-    .kpi b{font-size:22px;color:var(--brand)}
-
-    .list{display:grid;gap:10px}
-    .li{display:flex;gap:10px;align-items:flex-start}
-    .dot{width:9px;height:9px;border-radius:999px;background:var(--brand);margin-top:9px;flex:0 0 9px}
-
-    .btn{display:inline-block;padding:12px 16px;border-radius:14px;background:var(--brand);color:#fff;text-decoration:none;font-weight:800;border:1px solid var(--brand)}
-    .btn:hover{background:var(--brand-2)}
-    footer{padding:26px 0;color:#7a8a8a}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Acoustic Cleaners Type 230 & 360 | PRIMASOUND</title>
+<meta name="description" content="PRIMASOUND Acoustic Cleaners Type 230 and Type 360 for gas boilers and air coolers. Installation details, technical drawings and quotation request.">
+<style>
+:root{--night:#0b1718;--night2:#102427;--brand:#16aaa7;--brand2:#63d8d4;--paper:#f2f7f7;--card:#fff;--ink:#122326;--muted:#718184;--line:#d9e5e5;--shadow:0 18px 55px rgba(9,31,33,.11)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6}a{text-decoration:none;color:inherit}.wrap{max-width:1180px;margin:auto;padding:0 24px}.hidden{display:none!important}
+nav{position:sticky;top:0;z-index:50;background:rgba(11,23,24,.97);color:white;border-bottom:1px solid rgba(255,255,255,.08)}.nav{min-height:82px;display:flex;align-items:center;gap:20px}.logo{display:flex;align-items:center;gap:12px;font-weight:900;font-size:27px;letter-spacing:.3px}.mark{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#20c8c3,#087b7d);font-size:24px}.links{margin-left:auto;display:flex;align-items:center;gap:18px;font-weight:700;font-size:14px}.links a:hover{color:var(--brand2)}.lang button{border:0;background:none;color:#9cb0b1;font-weight:900;font-size:15px;cursor:pointer}.lang button.active{color:#5fd7d3}.quoteBtn{background:var(--brand);color:#061313!important;padding:12px 16px;border-radius:10px}.menuBtn{display:none;margin-left:auto;background:none;border:0;color:white;font-size:30px}.mobile{display:none;background:var(--night);padding:0 24px 18px}.mobile.open{display:grid;gap:14px}
+.hero{background:linear-gradient(115deg,#071213 0%,#0b1b1d 55%,#11383a 100%);color:white;padding:92px 0 70px;overflow:hidden}.heroGrid{display:grid;grid-template-columns:1.08fr .92fr;gap:52px;align-items:center}.eyebrow{font-size:12px;letter-spacing:2.2px;font-weight:900;color:var(--brand2);text-transform:uppercase}.hero h1{font-size:clamp(48px,7vw,82px);line-height:.97;margin:16px 0 20px;letter-spacing:-2px}.hero p{font-size:19px;color:#c8d5d6;max-width:720px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-block;padding:14px 18px;border-radius:10px;font-weight:900}.btn.primary{background:var(--brand);color:#041011}.btn.ghost{border:1px solid rgba(255,255,255,.35);color:white}.heroPanel{background:#fff;border-radius:24px;padding:16px;box-shadow:0 30px 80px rgba(0,0,0,.35)}.heroPanel img{width:100%;display:block;border-radius:15px;background:#fff}.heroPanel small{display:block;color:#637477;padding:10px 5px 2px}
+section{padding:72px 0}.sectionHead{max-width:770px;margin-bottom:30px}.sectionHead h2{font-size:clamp(32px,5vw,50px);line-height:1.08;margin:9px 0 12px;letter-spacing:-1px}.sectionHead p{color:var(--muted);font-size:18px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:var(--shadow)}.card img{width:100%;height:320px;object-fit:contain;background:white;display:block}.cardBody{padding:25px}.tag{display:inline-block;font-size:11px;font-weight:900;letter-spacing:1.5px;color:#127f7d;background:#e7f7f6;padding:7px 9px;border-radius:999px}.card h3{font-size:27px;margin:13px 0 8px}.card p{color:var(--muted)}
+.dataGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.data{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px}.data h3{margin-top:0;font-size:26px}.steps{display:grid;gap:13px}.step{display:grid;grid-template-columns:48px 1fr;gap:14px;align-items:start}.num{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:#dff5f3;color:#087b7d;font-weight:900}.step p{margin:2px 0;color:#526366}.specbar{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px}.spec{background:#0d2022;color:white;border-radius:16px;padding:20px}.spec b{display:block;color:#5ed7d2;font-size:21px}.spec span{font-size:13px;color:#b8c8c9}
+.drawings{display:grid;grid-template-columns:1fr 1fr;gap:22px}.drawing{background:#fff;border:1px solid var(--line);border-radius:22px;padding:16px;box-shadow:var(--shadow)}.drawing img{display:block;width:100%;max-height:720px;object-fit:contain}.drawing h3{padding:0 10px}.note{background:#e8f4f4;border-left:4px solid var(--brand);padding:18px 20px;border-radius:12px;color:#405457;margin-top:20px}
+.ctaBox{background:linear-gradient(120deg,#0a1718,#123638);color:white;border-radius:28px;padding:44px;display:flex;align-items:center;justify-content:space-between;gap:28px}.ctaBox h2{font-size:38px;margin:0 0 8px}.ctaBox p{color:#c5d3d4;margin:0}.footer{background:#091415;color:#a9babb;padding:36px 0}.footerGrid{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}.footer strong{color:white}.legal{font-size:12px;color:#7f9495;margin-top:20px}
+@media(max-width:900px){.links{display:none}.menuBtn{display:block}.heroGrid,.dataGrid,.drawings{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.hero{padding-top:64px}.heroPanel{max-width:650px}.specbar{grid-template-columns:1fr 1fr}.ctaBox{display:block}.ctaBox .btn{margin-top:20px}}
+@media(max-width:520px){.wrap{padding:0 18px}.logo{font-size:23px}.mark{width:44px;height:44px}.lang{margin-left:auto}.menuBtn{margin-left:0}.hero h1{font-size:49px}.hero p{font-size:17px}.heroPanel{padding:8px}.card img{height:270px}.specbar{grid-template-columns:1fr}.ctaBox{padding:28px 22px}.ctaBox h2{font-size:31px}}
+</style>
 </head>
 <body>
-  <!-- NAV -->
-  <header class="top">
-    <div class="container">
-      <nav>
-        <div class="logo">Primasound</div>
-        <div class="nav">
-          <a href="index.html">Αρχική</a>
-          <a href="projects.html">Projects</a>
-          <a class="cta" href="acoustic.html" aria-current="page">Acoustic Cleaners</a>
-          <a href="index.html#contact">Επικοινωνία</a>
-        </div>
-      </nav>
-    </div>
-  </header>
+<nav><div class="wrap nav"><a class="logo" href="index.html"><span class="mark">P</span>PRIMASOUND</a><div class="links"><a href="index.html"><span class="gr">Αρχική</span><span class="en hidden">Home</span></a><a href="#models"><span class="gr">Μοντέλα</span><span class="en hidden">Models</span></a><a href="#installation"><span class="gr">Εγκατάσταση</span><span class="en hidden">Installation</span></a><a href="#drawings"><span class="gr">Σχέδια</span><span class="en hidden">Drawings</span></a><a href="projects.html">Projects</a><a class="quoteBtn" href="mailto:info@primasound.info?subject=Acoustic%20Cleaner%20Quotation"><span class="gr">ΖΗΤΗΣΤΕ ΠΡΟΣΦΟΡΑ</span><span class="en hidden">REQUEST A QUOTE</span></a></div><div class="lang"><button id="grbtn" class="active" onclick="setLang('gr')">GR</button> | <button id="enbtn" onclick="setLang('en')">EN</button></div><button class="menuBtn" onclick="toggleMenu()">☰</button></div><div id="mobile" class="mobile"><a href="#models">Models</a><a href="#installation">Installation</a><a href="#drawings">Technical Drawings</a><a href="projects.html">Projects</a><a href="mailto:info@primasound.info?subject=Acoustic%20Cleaner%20Quotation">Request a Quote</a></div></nav>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container">
-      <span class="tag">Εξειδίκευση • Made in Greece</span>
-      <h1>Acoustic Cleaners <span style="color:var(--brand)">Type 230 & 360</span></h1>
-      <p>Απομάκρυνση επικαθίσεων με ελεγχόμενα ηχητικά κύματα. Μελέτη, κατασκευή, εγκατάσταση & υποστήριξη από την Primasound.</p>
-    </div>
-  </section>
+<header class="hero"><div class="wrap heroGrid"><div><div class="eyebrow">PRIMASOUND INDUSTRIAL ACOUSTIC CLEANERS</div><h1>Type 230<br>& Type 360</h1><p class="gr">Τεχνικές λύσεις Acoustic Cleaner για gas boilers και air coolers, με τεκμηριωμένη διαδικασία εγκατάστασης και πραγματικά κατασκευαστικά σχέδια PRIMASOUND.</p><p class="en hidden">Acoustic Cleaner solutions for gas boilers and air coolers, supported by documented installation procedures and genuine PRIMASOUND technical drawings.</p><div class="actions"><a class="btn primary" href="#models"><span class="gr">ΔΕΙΤΕ ΤΑ ΜΟΝΤΕΛΑ</span><span class="en hidden">VIEW MODELS</span></a><a class="btn ghost" href="acoustic-cleaners-installation.pdf" target="_blank"><span class="gr">TECHNICAL PDF ↓</span><span class="en hidden">TECHNICAL PDF ↓</span></a></div></div><div class="heroPanel"><img src="type-230-system.png" alt="PRIMASOUND Type 230 acoustic cleaner system drawing"><small class="gr">Τεχνικό σχέδιο Type 230 για gas boiler.</small><small class="en hidden">Type 230 technical arrangement for a gas boiler.</small></div></div></header>
 
-  <!-- ΚΥΡΙΑ ΕΝΟΤΗΤΑ -->
-  <section class="container grid cols-2">
-    <div class="card">
-      <div class="media">
-        <!-- ΑΝΕΒΑΣΕ φωτο: acoustic230.jpg -->
-        <img src="acoustic230.jpg" alt="Acoustic Cleaner Type 230">
-      </div>
-      <div class="pad">
-        <h3>Type 230 — Συμπαγής απόδοση</h3>
-        <p class="sub" style="color:var(--muted)">Ιδανικός για σιλό, κυκλώνες, φίλτρα & αγωγούς όπου απαιτείται συχνός καθαρισμός χωρίς διακοπή παραγωγής.</p>
-        <div class="specs">
-          <div class="kpi"><b>230 Hz</b><br>Συχνότητα λειτουργίας</div>
-          <div class="kpi"><b>24/7</b><br>Duty cycle με χρονοπρόγραμμα</div>
-          <div class="kpi"><b>IP65</b><br>Βαθμός προστασίας οργάνου</div>
-        </div>
-      </div>
-    </div>
+<section id="models"><div class="wrap"><div class="sectionHead"><div class="eyebrow">PRODUCT RANGE</div><h2 class="gr">Τρία τεκμηριωμένα configurations.</h2><h2 class="en hidden">Three documented configurations.</h2><p class="gr">Το τεχνικό εγχειρίδιο PRIMASOUND καλύπτει Type 230 για gas boilers και Type 360 για air coolers και gas boilers.</p><p class="en hidden">The PRIMASOUND technical manual covers Type 230 for gas boilers and Type 360 for air coolers and gas boilers.</p></div><div class="cards">
+<article class="card"><img src="type-230-parts.png" alt="Type 230 parts and dimensions"><div class="cardBody"><span class="tag">TYPE 230</span><h3>Gas Boilers</h3><p class="gr">Εγκατάσταση με PART A / PART B, sound generator, solenoid valve και filter regulation.</p><p class="en hidden">Installation with PART A / PART B, sound generator, solenoid valve and filter regulation.</p></div></article>
+<article class="card"><img src="type-360-air-cooler.png" alt="Type 360 air cooler system"><div class="cardBody"><span class="tag">TYPE 360</span><h3>Air Coolers</h3><p class="gr">Configuration Type 360 για air cooler με sound generator, valve assembly, filter regulation και support.</p><p class="en hidden">Type 360 configuration for air coolers with sound generator, valve assembly, filter regulation and support.</p></div></article>
+<article class="card"><img src="type-360-gas-boiler.png" alt="Type 360 gas boiler system"><div class="cardBody"><span class="tag">TYPE 360</span><h3>Gas Boilers</h3><p class="gr">Configuration Type 360 για gas boiler με τεκμηριωμένη διάταξη σύνδεσης και υποστήριξης.</p><p class="en hidden">Type 360 gas-boiler configuration with documented connection and support arrangement.</p></div></article>
+</div></div></section>
 
-    <div class="card">
-      <div class="media">
-        <!-- ΑΝΕΒΑΣΕ φωτο: acoustic360.jpg -->
-        <img src="acoustic360.jpg" alt="Acoustic Cleaner Type 360">
-      </div>
-      <div class="pad">
-        <h3>Type 360 — Μέγιστη εμβέλεια</h3>
-        <p class="sub" style="color:var(--muted)">Για μεγάλους όγκους, σιλό υψηλού ύψους, εναλλάκτες & θαλάμους όπου οι επικαθίσεις είναι επίμονες.</p>
-        <div class="specs">
-          <div class="kpi"><b>360 Hz</b><br>Συχνότητα λειτουργίας</div>
-          <div class="kpi"><b>≈ 30–60 m</b><br>Αποτελεσματική εμβέλεια</div>
-          <div class="kpi"><b>ATEX</b><br>Επιλογές για επικίνδυνες ζώνες</div>
-        </div>
-      </div>
-    </div>
-  </section>
+<section id="installation"><div class="wrap"><div class="sectionHead"><div class="eyebrow">INSTALLATION DATA</div><h2 class="gr">Πραγματικά στοιχεία εγκατάστασης από το τεχνικό εγχειρίδιο.</h2><h2 class="en hidden">Installation data from the technical manual.</h2></div><div class="dataGrid">
+<div class="data"><span class="tag">TYPE 230 / GAS BOILER</span><h3 class="gr">Βασική διαδικασία</h3><h3 class="en hidden">Core procedure</h3><div class="steps"><div class="step"><span class="num">1</span><p class="gr">Άνοιγμα Ø105 mm στο manhole του gas boiler.</p><p class="en hidden">Cut a Ø105 mm opening in the gas-boiler manhole.</p></div><div class="step"><span class="num">2</span><p class="gr">Τέσσερις οπές Ø12 mm γύρω από το άνοιγμα, με απόσταση κέντρων 145 mm.</p><p class="en hidden">Drill four Ø12 mm holes around the opening, with 145 mm centre spacing.</p></div><div class="step"><span class="num">3</span><p class="gr">Συναρμολόγηση PART A / PART B με τα προβλεπόμενα M10 και M8 bolts.</p><p class="en hidden">Assemble PART A / PART B using the specified M10 and M8 bolts.</p></div><div class="step"><span class="num">4</span><p class="gr">Σύνδεση solenoid valve, filter regulation και παροχής αέρα.</p><p class="en hidden">Connect the solenoid valve, filter regulation and air supply.</p></div></div></div>
+<div class="data"><span class="tag">TYPE 360 / AIR COOLER & GAS BOILER</span><h3 class="gr">Βασική διαδικασία</h3><h3 class="en hidden">Core procedure</h3><div class="steps"><div class="step"><span class="num">1</span><p class="gr">Άνοιγμα Ø34 mm στο manhole.</p><p class="en hidden">Cut a Ø34 mm opening in the manhole.</p></div><div class="step"><span class="num">2</span><p class="gr">Τρεις οπές Ø9 mm σε ακτίνα 41 mm και γωνιακή απόσταση 120°.</p><p class="en hidden">Drill three Ø9 mm holes on a 41 mm radius, 120° apart.</p></div><div class="step"><span class="num">3</span><p class="gr">Συναρμολόγηση PART A, PART B και PART C με M8 bolts.</p><p class="en hidden">Assemble PART A, PART B and PART C using M8 bolts.</p></div><div class="step"><span class="num">4</span><p class="gr">Σύνδεση solenoid valve, filter regulation και παροχής αέρα.</p><p class="en hidden">Connect the solenoid valve, filter regulation and air supply.</p></div></div></div>
+</div><div class="specbar"><div class="spec"><b>6-7 bar</b><span class="gr">Air Supply</span><span class="en hidden">Air Supply</span></div><div class="spec"><b>80×80×8 mm</b><span class="gr">Προτεινόμενο angle bar</span><span class="en hidden">Suggested angle bar</span></div><div class="spec"><b>Ø60 mm</b><span class="gr">U-bolt για support pipe</span><span class="en hidden">U-bolt for support pipe</span></div><div class="spec"><b>M8 / M10</b><span class="gr">Bolting ανά configuration</span><span class="en hidden">Bolting by configuration</span></div></div><div class="note gr">Σημείωση: τα παραπάνω αποτυπώνουν τη διαδικασία του τεχνικού εγχειριδίου. Η τελική εφαρμογή πρέπει να ακολουθεί το εγκεκριμένο σχέδιο και τις πραγματικές συνθήκες του έργου.</div><div class="note en hidden">Note: the values above reflect the technical manual. Final installation should follow the approved drawing and actual project conditions.</div></div></section>
 
-  <!-- ΟΦΕΛΗ -->
-  <section class="container grid">
-    <div class="card">
-      <div class="pad">
-        <h3>Γιατί Acoustic Cleaners;</h3>
-        <div class="list">
-          <div class="li"><span class="dot"></span><div>Καθαρισμός **χωρίς μηχανική επαφή** — μειώνει φθορές & downtime.</div></div>
-          <div class="li"><span class="dot"></span><div>Σταθερή ροή υλικού σε σιλό & αγωγούς, αποφυγή «bridging» & «rat-holing».</div></div>
-          <div class="li"><span class="dot"></span><div>Εξοικονόμηση ενέργειας σε φίλτρα/εναλλάκτες χάρη στη διατήρηση απόδοσης.</div></div>
-          <div class="li"><span class="dot"></span><div>Πλήρης αυτοματοποίηση με PLC/χρονοπρόγραμμα & **safe interlocks**.</div></div>
-        </div>
-      </div>
-    </div>
+<section id="drawings"><div class="wrap"><div class="sectionHead"><div class="eyebrow">TECHNICAL DRAWINGS</div><h2 class="gr">Κατασκευαστικά σχέδια PRIMASOUND.</h2><h2 class="en hidden">PRIMASOUND technical drawings.</h2><p class="gr">Τα παρακάτω σχέδια προέρχονται από το τεχνικό έγγραφο εγκατάστασης Acoustic Cleaners.</p><p class="en hidden">The drawings below are taken from the Acoustic Cleaners installation document.</p></div><div class="drawings"><div class="drawing"><img src="type-230-system.png" alt="Type 230 system drawing"><h3>Type 230 - Gas Boiler</h3></div><div class="drawing"><img src="type-360-gas-boiler.png" alt="Type 360 gas boiler drawing"><h3>Type 360 - Gas Boiler</h3></div><div class="drawing"><img src="type-360-air-cooler.png" alt="Type 360 air cooler drawing"><h3>Type 360 - Air Cooler</h3></div><div class="drawing"><img src="type-360-parts.png" alt="Type 360 parts drawing"><h3>Type 360 - Parts & Dimensions</h3></div></div></div></section>
 
-    <div class="card">
-      <div class="media">
-        <!-- ΑΝΕΒΑΣΕ φωτο: acoustic-install.jpg -->
-        <img src="acoustic-install.jpg" alt="Εγκατάσταση Acoustic Cleaner">
-      </div>
-      <div class="pad">
-        <h3>Ολοκληρωμένη λύση Primasound</h3>
-        <p class="sub" style="color:var(--muted)">Μελέτη θέσης & αριθμού οργάνων, βάση στήριξης, σωληνώσεις αέρα, πίνακας, commissioning & εκπαίδευση.</p>
-        <a class="btn" href="index.html#contact">Ζήτα μελέτη στο χώρο σου</a>
-      </div>
-    </div>
-  </section>
+<section><div class="wrap"><div class="ctaBox"><div><div class="eyebrow">ENGINEERING ENQUIRY</div><h2 class="gr">Χρειάζεστε Acoustic Cleaner για το έργο σας;</h2><h2 class="en hidden">Need an Acoustic Cleaner for your project?</h2><p class="gr">Στείλτε μας σχέδια, διαστάσεις και στοιχεία εφαρμογής για τεχνική αξιολόγηση και προσφορά.</p><p class="en hidden">Send drawings, dimensions and application data for technical evaluation and quotation.</p></div><a class="btn primary" href="mailto:info@primasound.info?subject=Acoustic%20Cleaner%20Quotation">REQUEST A QUOTE →</a></div></div></section>
 
-  <!-- FAQ -->
-  <section class="container">
-    <div class="card">
-      <div class="pad">
-        <h3>Συχνές ερωτήσεις</h3>
-        <div class="list">
-          <div class="li"><span class="dot"></span><div><b>Σε τι υλικά δουλεύουν;</b><br>Τσιμέντο, γύψος, τέφρα, κόκκοι μετάλλων, σιτηρά, pellets, ασβέστης, κ.ά.</div></div>
-          <div class="li"><span class="dot"></span><div><b>Θέλουν πεπιεσμένο αέρα;</b><br>Ναι. Παρέχουμε προδιαγραφές παροχής/πίεσης και φίλτρανσης.</div></div>
-          <div class="li"><span class="dot"></span><div><b>Θόρυβος/ασφάλεια;</b><br>Κέλυφος απομόνωσης, σίγαση εκτόνωσης και ηλεκτρικές/μηχανικές ασφαλίσεις.</div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer class="container">© 2025 Primasound</footer>
+<footer class="footer"><div class="wrap"><div class="footerGrid"><div><strong>PRIMASOUND</strong><br><span>Industrial & Acoustic Solutions</span></div><div>Tel: +30 210 451 9608<br>Email: info@primasound.info</div></div><div class="legal">Technical drawings and installation data are reproduced from the PRIMASOUND Acoustic Cleaners installation document.</div></div></footer>
+<script>
+function setLang(l){document.querySelectorAll('.gr').forEach(e=>e.classList.toggle('hidden',l!=='gr'));document.querySelectorAll('.en').forEach(e=>e.classList.toggle('hidden',l!=='en'));document.getElementById('grbtn').classList.toggle('active',l==='gr');document.getElementById('enbtn').classList.toggle('active',l==='en')}
+function toggleMenu(){document.getElementById('mobile').classList.toggle('open')}
+</script>
 </body>
 </html>
-
-  
