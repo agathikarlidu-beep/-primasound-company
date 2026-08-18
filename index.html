@@ -1,171 +1,28 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="el">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Primasound — Κατασκευές Μετάλλου</title>
-  <meta name="description" content="Primasound - Βιομηχανικές σωληνώσεις, ναυπηγικές εργασίες, μεταλλικά έργα, πέργκολες & σπίτια προκατ. Πειραιάς." />
-
-  <style>
-    :root{
-      --ink:#1c2b2b;
-      --muted:#607d7d;
-      --paper:#f4f7f7;
-      --card:#ffffff;
-      --brand:#009e9e;
-      --brand-dark:#006d6d;
-      --brand-deep:#005a5a;
-      --radius:18px;
-      --shadow:0 10px 26px rgba(0,0,0,.10), 0 2px 8px rgba(0,0,0,.06);
-    }
-
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Arial, Helvetica, sans-serif;background:var(--paper);color:var(--ink);line-height:1.5}
-
-    /* NAV */
-    nav{background:#fff;position:sticky;top:0;z-index:50;box-shadow:0 1px 0 rgba(0,0,0,.06)}
-    .nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:12px 18px}
-    .menu{display:flex;gap:18px}
-    .menu a{color:#475a5a;text-decoration:none;font-weight:600}
-    .menu a:hover{color:var(--brand)}
-    .menu a.active{color:var(--brand-deep);font-weight:700}
-
-    /* LOGO */
-    .logo {
-      font-size: 26px;
-      font-weight: 900;
-      font-family: 'Arial Black', Arial, sans-serif;
-      background: linear-gradient(90deg, #00a8a8, #444);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.25);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      text-decoration: none;
-    }
-    .logo-icon {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #00a8a8, #006d6d);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      font-weight: 800;
-      font-size: 16px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    }
-
-    /* HERO */
-    header{background:linear-gradient(135deg,#009688,#006d6d);color:#fff;text-align:center;padding:60px 20px}
-    header h1{margin:0;font-size:42px}
-    header p{margin-top:10px;font-size:18px}
-
-    /* MAIN */
-    main{max-width:1100px;margin:0 auto;padding:40px 20px}
-    h2{text-align:center;margin-bottom:20px}
-
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
-    .card{background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);position:relative}
-    .card img{width:100%;height:240px;object-fit:cover;display:block}
-    .caption{position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,.55);color:#fff;padding:12px;font-weight:700;text-align:center}
-
-    /* CONTACT */
-    #contact{margin-top:50px}
-    .contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-    .contact-info{background:#fff;padding:20px;border-radius:var(--radius);box-shadow:var(--shadow)}
-    .row{margin-bottom:12px}
-    .btn{display:inline-block;padding:10px 14px;border-radius:12px;text-decoration:none;font-weight:700}
-    .btn.primary{background:var(--brand);color:#fff}
-    .btn.secondary{border:1px solid var(--brand);color:var(--brand);background:#fff}
-
-    iframe{width:100%;height:300px;border:0;border-radius:var(--radius)}
-    footer{text-align:center;color:var(--muted);padding:30px 10px}
-    @media(max-width:768px){.contact-wrap{grid-template-columns:1fr}}
-  </style>
-</head>
-<body>
-
-  <!-- NAV -->
-  <nav>
-    <div class="nav-inner">
-      <!-- Νέο λογότυπο -->
-      <a href="index.html" class="logo">
-        <div class="logo-icon">P</div>
-        Primasound
-      </a>
-
-      <div class="menu">
-        <a class="active" href="index.html">Αρχική</a>
-        <a href="projects.html">Projects</a>
-        <a href="acoustic.html">Acoustic Cleaners</a>
-        <a href="#contact">Επικοινωνία</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <header>
-    <h1>Primasound</h1>
-    <p>Κατασκευές μετάλλου — Επαγγελματικά έργα</p>
-  </header>
-
-  <!-- PROJECTS -->
-  <main>
-    <h2>Τα έργα μας</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="IMG_20250907_193041.jpg" alt="Βιομηχανικές Σωληνώσεις">
-        <div class="caption">Βιομηχανικές Σωληνώσεις</div>
-      </div>
-      <div class="card">
-        <img src="IMG_20250907_193116.jpg" alt="Ναυπηγικές Εργασίες">
-        <div class="caption">Ναυπηγικές Εργασίες</div>
-      </div>
-      <div class="card">
-        <img src="IMG_20250907_212704.jpg" alt="Μεταλλική Σκάλα">
-        <div class="caption">Μεταλλική Σκάλα</div>
-      </div>
-      <div class="card">
-        <img src="https://tse3.mm.bing.net/th/id/OIP.AqBG91wOus3mXqCXrNp9XQHaEK?pid=Api" alt="Ξύλινη minimal πέργκολα εξωτερικού χώρου">
-        <div class="caption">Πέργκολα Εξωτερικού Χώρου</div>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=1600&auto=format&fit=crop" alt="Σύγχρονο σπίτι προκατ με ξύλο και τζαμαρίες">
-        <div class="caption">Σπίτια Προκάτ</div>
-      </div>
-      <div class="card">
-        <img src="IMG_20250907_212604.jpg" alt="Κατασκευή Μετάλλου">
-        <div class="caption">Κατασκευή Μετάλλου</div>
-      </div>
-    </div>
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <h2>Επικοινωνία</h2>
-      <div class="contact-wrap">
-        <div class="contact-info">
-          <div class="row">📞 210 451 9608</div>
-          <div class="row">✉️ info@primasound.info</div>
-          <div class="row">📍 Παλαμηδίου 6, Πειραιάς 18543</div>
-          <a class="btn primary" href="tel:+302104519608">Κλήση</a>
-          <a class="btn secondary" href="mailto:info@primasound.info">Email</a>
-        </div>
-        <div>
-          <iframe
-            title="Χάρτης Primasound"
-            src="https://www.google.com/maps?q=Παλαμηδίου+6,+Πειραιάς+18543&output=embed"
-            loading="lazy"></iframe>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    © 2025 Primasound — Όλα τα δικαιώματα διατηρούνται.
-  </footer>
-
-</body>
-</html>  
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PRIMASOUND | Industrial Fabrication & Acoustic Solutions</title>
+<meta name="description" content="PRIMASOUND — βιομηχανικές και ναυπηγικές μεταλλικές κατασκευές, acoustic cleaners και custom fabrication στον Πειραιά.">
+<style>
+:root{--bg:#f3f6f6;--ink:#102124;--muted:#6e7d80;--brand:#18b7b4;--brand2:#087b7d;--night:#0e1719;--card:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}a{text-decoration:none;color:inherit}.wrap{max-width:1180px;margin:auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:50;background:rgba(14,23,25,.97);color:#fff}.nav{min-height:82px;display:flex;align-items:center;gap:20px}.logo{display:flex;align-items:center;gap:12px;font-size:27px;font-weight:900}.mark{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#22c9c5,#087b7d)}.menu{margin-left:auto;display:flex;gap:20px;align-items:center;font-size:14px;font-weight:700}.quote{background:var(--brand);color:#071416;padding:11px 14px;border-radius:10px}
+.hero{min-height:620px;display:flex;align-items:center;color:#fff;background:linear-gradient(90deg,rgba(5,14,16,.96),rgba(5,14,16,.65)),url('IMG_20250907_193041.jpg') center/cover}.eyebrow{color:#4fd5d1;font-size:13px;font-weight:900;letter-spacing:2px;text-transform:uppercase}.hero h1{font-size:clamp(50px,8vw,86px);line-height:.96;margin:18px 0 22px;max-width:900px}.hero p{font-size:20px;max-width:760px;color:#d5e0e1}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{padding:15px 20px;border-radius:11px;font-weight:900;display:inline-block}.primary{background:var(--brand);color:#071416}.secondary{border:1px solid rgba(255,255,255,.55);color:#fff}
+section{padding:72px 0}.section-head{max-width:800px;margin-bottom:32px}.section-head h2{font-size:clamp(36px,5vw,56px);line-height:1.05;margin:10px 0}.section-head p{color:var(--muted);font-size:18px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 12px 34px rgba(12,35,38,.08)}.card img{width:100%;height:230px;object-fit:cover}.card-body{padding:22px}.card h3{margin:0 0 8px;font-size:24px}.card p{margin:0;color:var(--muted)}.link{display:inline-block;margin-top:15px;color:var(--brand2);font-weight:900}.dark{background:var(--night);color:#fff}.dark p{color:#aab8ba}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.feature{padding:26px;border:1px solid rgba(255,255,255,.12);border-radius:18px}.feature b{display:block;color:#4fd5d1;font-size:32px}.contact{display:grid;grid-template-columns:1fr 1fr;gap:20px}.panel{background:#fff;border-radius:22px;padding:28px;box-shadow:0 12px 34px rgba(12,35,38,.08)}iframe{width:100%;height:300px;border:0;border-radius:16px}.footer{background:#0a1214;color:#9aa9ab;padding:36px 0}.footer b{color:#fff}
+@media(max-width:850px){.menu{display:none}.hero{min-height:560px}.hero h1{font-size:50px}.grid,.features,.contact{grid-template-columns:1fr}}
+</style></head><body>
+<nav><div class="wrap nav"><a class="logo" href="index.html"><span class="mark">P</span>PRIMASOUND</a><div class="menu"><a href="index.html">Αρχική</a><a href="#products">Products</a><a href="projects.html">Projects</a><a href="acoustic.html">Acoustic Cleaners</a><a href="#contact">Επικοινωνία</a><a class="quote" href="mailto:info@primasound.info?subject=Request%20for%20Quotation">ΖΗΤΗΣΤΕ ΠΡΟΣΦΟΡΑ</a></div></div></nav>
+<header class="hero"><div class="wrap"><div class="eyebrow">Industrial Fabrication · Acoustic Solutions</div><h1>Engineering solutions built for demanding projects.</h1><p>Βιομηχανικές και ναυπηγικές μεταλλικές κατασκευές, acoustic solutions και custom fabrication για έργα που απαιτούν ακρίβεια, αντοχή και αξιοπιστία.</p><div class="actions"><a class="btn primary" href="#products">ΔΕΙΤΕ ΤΙΣ ΛΥΣΕΙΣ ΜΑΣ →</a><a class="btn secondary" href="mailto:info@primasound.info?subject=Request%20for%20Quotation">ΖΗΤΗΣΤΕ ΠΡΟΣΦΟΡΑ</a></div></div></header>
+<section id="products"><div class="wrap"><div class="section-head"><div class="eyebrow">Products & Solutions</div><h2>Από standard προϊόντα μέχρι ειδικές κατασκευές.</h2><p>Λύσεις για βιομηχανία, ναυτιλία και ειδικές μεταλλικές εφαρμογές.</p></div><div class="grid">
+<a class="card" href="acoustic.html"><img src="IMG_20250907_180844.jpg"><div class="card-body"><h3>Acoustic Cleaners</h3><p>Εξειδικευμένες acoustic λύσεις για βιομηχανικές εφαρμογές.</p><span class="link">Περισσότερα →</span></div></a>
+<a class="card" href="projects.html"><img src="IMG_20250907_193116.jpg"><div class="card-body"><h3>Industrial & Marine</h3><p>Σωληνώσεις, ναυπηγικές εργασίες και μεταλλικά έργα.</p><span class="link">Δείτε έργα →</span></div></a>
+<a class="card" href="metal-staircases.html"><img src="IMG_20250907_212704.jpg"><div class="card-body"><h3>Metal Staircases</h3><p>Custom μεταλλικές σκάλες για κάθε έργο.</p><span class="link">Περισσότερα →</span></div></a>
+<a class="card" href="pergolas.html"><img src="IMG_20250907_212604.jpg"><div class="card-body"><h3>Pergolas</h3><p>Μεταλλικές πέργκολες για επαγγελματικούς και ιδιωτικούς χώρους.</p><span class="link">Περισσότερα →</span></div></a>
+<a class="card" href="motorsport.html"><img src="IMG_20250907_193041.jpg"><div class="card-body"><h3>Motorsport Fabrication</h3><p>Custom βάσεις, εξαρτήματα και τεχνικές μεταλλικές λύσεις.</p><span class="link">Περισσότερα →</span></div></a>
+<a class="card" href="mailto:info@primasound.info?subject=Custom%20Fabrication"><img src="IMG_20250907_212604.jpg"><div class="card-body"><h3>Custom Fabrication</h3><p>Στείλτε σχέδιο, διαστάσεις ή τεχνική απαίτηση.</p><span class="link">Ζητήστε προσφορά →</span></div></a>
+</div></div></section>
+<section class="dark"><div class="wrap"><div class="section-head"><div class="eyebrow">Why PRIMASOUND</div><h2>Τεχνική σκέψη. Κατασκευή. Εφαρμογή.</h2><p>Κάθε έργο αντιμετωπίζεται ως ξεχωριστή τεχνική απαίτηση.</p></div><div class="features"><div class="feature"><b>01</b>Custom λύσεις σύμφωνα με το έργο.</div><div class="feature"><b>02</b>Βιομηχανική και ναυπηγική εμπειρία.</div><div class="feature"><b>03</b>Άμεση τεχνική υποστήριξη.</div></div></div></section>
+<section id="contact"><div class="wrap"><div class="section-head"><div class="eyebrow">Contact</div><h2>Μιλήστε μας για το έργο σας.</h2></div><div class="contact"><div class="panel"><h3>PRIMASOUND</h3><p>📞 <a href="tel:+302104519608">210 451 9608</a></p><p>✉️ <a href="mailto:info@primasound.info">info@primasound.info</a></p><p>📍 Παλαμηδίου 6, Πειραιάς 18543</p><a class="btn primary" href="mailto:info@primasound.info?subject=Request%20for%20Quotation">ΖΗΤΗΣΤΕ ΠΡΟΣΦΟΡΑ</a></div><div class="panel"><iframe src="https://www.google.com/maps?q=Παλαμηδίου+6,+Πειραιάς+18543&output=embed" loading="lazy"></iframe></div></div></div></section>
+<footer class="footer"><div class="wrap"><b>PRIMASOUND</b> · Industrial Fabrication & Acoustic Solutions<br>© 2026 PRIMASOUND</div></footer>
+</body></html>
